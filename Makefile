@@ -18,6 +18,7 @@ run: test1 test2
 demo: Demo.o $(OBJECTS) 
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
+
 mydemo: mydemo.o $(OBJECTS) 
 	$(CXX) $(CXXFLAGS) $^ -o $@
 
@@ -42,4 +43,4 @@ $(OBJECT_PATH)/%.o: $(SOURCE_PATH)/%.cpp $(HEADERS)
 	$(CXX) $(CXXFLAGS) --compile $< -o $@
 
 clean:
-	rm -f $(OBJECTS) *.o test* demo* mydemo*
+	rm -f $(OBJECTS) *.o test* demo* 
