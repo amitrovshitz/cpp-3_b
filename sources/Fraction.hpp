@@ -51,7 +51,7 @@ namespace ariel
             static int overflow_mul(int num1, int num2)
             {
                 int max = std::numeric_limits<int>::max();
-                if(((num1 > 0) && (num2 > max / num1)) || ((num1 < 0) && (num2 < max - num1)))
+                if(((num1 > 0) && (num2 > max / num1)) || ((num1 < 0) && (num2 < max / num1)))
                 {
                     throw overflow_error("overflow");
                 } 
